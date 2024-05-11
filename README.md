@@ -4,11 +4,11 @@ API testing is a cornerstone of modern software development, ensuring that the b
 
 ## Why CLI for API Testing?
 
-Speed and Flexibility: CLI tools are lightweight and fast, allowing you to run tests quickly without the overhead of a GUI.
-Automation: CLI tools can be easily integrated into CI/CD pipelines, making automation a breeze.
-Customization: You can tailor CLI commands to fit your specific needs, making your workflow more efficient.
+- Speed and Flexibility: CLI tools are lightweight and fast, allowing you to run tests quickly without the overhead of a GUI.
+- Automation: CLI tools can be easily integrated into CI/CD pipelines, making automation a breeze.
+- Customization: You can tailor CLI commands to fit your specific needs, making your workflow more efficient.
 
-## Setting Up Your 
+## Setting Up Your Environment
 
 Before diving into code, ensure you have Node.js and npm installed. Then, install Playwright with TypeScript:
 
@@ -21,6 +21,7 @@ Also, install the ts-node package to execute TypeScript on Node.js without preco
 Writing Your First API Test with Playwright
 Playwright is generally used for end-to-end testing of web apps, but it can also be used for API testing. Here’s a simple example:
 
+```
 import { test, expect } from "@playwright/test";
 
 
@@ -121,13 +122,14 @@ test.describe("Suite de testes API ServRest", async () => {
   });
 });
 
+```
 
 Building a CLI Helper
 1. Let’s imagine such a structure of tests. 
 
 tests
  api.spec.ts
-    createUser
+    postUser
     getUser
     updateUser
     deleteUser
@@ -135,6 +137,8 @@ tests
 Each sub-folder under the service would contain the tests for the respective endpoints. 
 
 2. Create a new TypeScript file, runTests.ts, and add the following code:
+
+```
 
 import { execSync } from 'child_process';
 type Environments = {
@@ -151,6 +155,8 @@ const suite = process.argv[3] || '';
 const apiUrl = environments[env];
 const command = `API_URL=${apiUrl} npx playwright test tests/${suite}`;
 execSync(command, { stdio: 'inherit' });
+
+```
 
 3. Add a script to your package.json to run the CLI tool:
 
