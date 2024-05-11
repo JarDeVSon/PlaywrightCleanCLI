@@ -18,7 +18,8 @@ Also, install the ts-node package to execute TypeScript on Node.js without preco
 
 `npm install ts-node`
 
-Writing Your First API Test with Playwright
+## Writing Your First API Test with Playwright
+
 Playwright is generally used for end-to-end testing of web apps, but it can also be used for API testing. Here’s a simple example:
 
 ```
