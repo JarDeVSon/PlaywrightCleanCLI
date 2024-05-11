@@ -1,13 +1,12 @@
 import { test, expect } from "@playwright/test";
 
-
 let tokenStorage: any;
 let id: any;
 const API_URL = process.env.API_URL;
 
 test.describe("Suite de testes API ServRest", async () => {
   test.beforeEach("Before Each Hook - Storage token", async ({ request }) => {
-    console.log(API_URL)
+    console.log(API_URL);
     const response = await request.post(`${API_URL}/login`, {
       data: {
         email: "fulano@qa.com",
@@ -28,13 +27,13 @@ test.describe("Suite de testes API ServRest", async () => {
 
     console.log(response);
     console.log(response.status());
-    expect(response.status()).toBe(200)
+    expect(response.status()).toBe(200);
   });
 
   test("POST API Request", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
-        'Authorization': tokenStorage,
+        Authorization: tokenStorage,
         "Content-Type": "application/json",
       },
       data: {
@@ -55,7 +54,7 @@ test.describe("Suite de testes API ServRest", async () => {
   test("GET ONE SINGLE API Request", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
-        'Authorization': tokenStorage,
+        Authorization: tokenStorage,
         "Content-Type": "application/json",
       },
     });
@@ -73,7 +72,7 @@ test.describe("Suite de testes API ServRest", async () => {
         administrador: "true",
       },
       headers: {
-        'Authorization': tokenStorage,
+        Authorization: tokenStorage,
         "Content-Type": "application/json",
       },
     });
@@ -84,14 +83,12 @@ test.describe("Suite de testes API ServRest", async () => {
   });
 
   test("DELETE API Request", async ({ request }) => {
-    const response = await request.delete(`${API_URL}/usuarios/${id}`,
-      {
-        headers: {
-          'Authorization': tokenStorage,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await request.delete(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: tokenStorage,
+        "Content-Type": "application/json",
+      },
+    });
     console.log(response);
     console.log(response.status());
     expect(response.status()).toBe(200);
