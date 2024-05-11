@@ -124,17 +124,17 @@ test.describe("Suite de testes API ServRest", async () => {
 
 ```
 
-Building a CLI Helper
+## Building a CLI Helper
 1. Let’s imagine such a structure of tests. 
 
-tests
- api.spec.ts
-    postUser
-    getUser
-    updateUser
-    deleteUser
+- tests/
+    - api.spec.ts
+        - postUser
+        - getUser
+        - updateUser
+        - deleteUser
 
-Each sub-folder under the service would contain the tests for the respective endpoints. 
+Each sub-folder under the service would contain the suite tests for the respective endpoints.
 
 2. Create a new TypeScript file, runTests.ts, and add the following code:
 
@@ -160,11 +160,15 @@ execSync(command, { stdio: 'inherit' });
 
 3. Add a script to your package.json to run the CLI tool:
 
+```
 {
   "scripts": {
     "test.api": "ts-node tests/runTests.ts"
   }
 }
+
+```
+
 Examples:
 
 Run all tests for the UAT environment:
@@ -175,8 +179,8 @@ Run tests for the SIT environment for api.spec.ts suite:
 
 `npm run test.api sit api.spec.ts`
 
-Advanced CLI Features
-Cross-Platform Scalability with cross-env
+## Advanced CLI Features: Cross-Platform Scalability with cross-env
+
 One of the challenges in scaling your test execution script across different platforms is dealing with environment variables. In Unix-based systems like Linux and macOS, setting an environment variable directly in the script is straightforward. However, the same syntax won’t work on a Windows machine, leading to script failures. This is where the cross-env package comes into play. Using cross-env to set environment variables ensures that your script is platform-agnostic.
 
 Install cross-env package:
