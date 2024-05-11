@@ -180,7 +180,9 @@ Run tests for the SIT environment for api.spec.ts suite:
 
 `npm run test.api sit api.spec.ts`
 
-## Advanced CLI Features: Cross-Platform Scalability with cross-env
+## Advanced CLI Features
+
+## Cross-Platform Scalability with cross-env
 
 One of the challenges in scaling your test execution script across different platforms is dealing with environment variables. In Unix-based systems like Linux and macOS, setting an environment variable directly in the script is straightforward. However, the same syntax won’t work on a Windows machine, leading to script failures. This is where the cross-env package comes into play. Using cross-env to set environment variables ensures that your script is platform-agnostic.
 
