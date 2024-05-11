@@ -1,6 +1,6 @@
 # Introduction
 
-API testing is a cornerstone of modern software development, ensuring that the backbone of your application is robust and reliable. However, the process can become cumbersome without the right tools and practices. One way to streamline your API testing workflow is by leveraging a clean Command Line Interface (CLI). This post will dive into how you can improve your API testing workflow using a clean CLI, with code examples in Playwright and TypeScript.
+API testing is a cornerstone of modern software development, ensuring that the backbone of your application is robust and reliable. However, the process can become cumbersome without the right tools and practices. One way to streamline your API testing workflow is by leveraging a clean Command Line Interface (CLI). This project will dive into how you can improve your API testing workflow using a clean CLI, with code examples in Playwright and TypeScript.
 
 ## Why CLI for API Testing?
 
