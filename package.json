@@ -1,0 +1,24 @@
+{
+  "name": "playwrightcleancli",
+  "version": "1.0.0",
+  "main": "playwright.config.ts",
+  "scripts": {
+    "test.api": "ts-node tests/runTests.ts",
+    "test.api.dev": "npm run test.api dev api.spec.ts",
+    "test.api.sit": "npm run test.api sit api.spec.ts",
+    "test.api.uat": "npm run test.api uat api.spec.ts",
+    "test.api.prod": "npm run test.api prod api.spec.ts"
+  },
+  "keywords": [],
+  "author": "Jardeson Santos",
+  "license": "ISC",
+  "description": "Playwright CLEAN CLI by Jardeson Santos",
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.11"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2"
+  }
+}
