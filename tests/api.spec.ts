@@ -34,7 +34,7 @@ test.describe("Suite de testes API ServRest", async () => {
   test("POST API Request", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
-        Authorization: tokenStorage,
+        'Authorization': tokenStorage,
         "Content-Type": "application/json",
       },
       data: {
@@ -55,7 +55,7 @@ test.describe("Suite de testes API ServRest", async () => {
   test("GET ONE SINGLE API Request", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
-        Authorization: tokenStorage,
+        'Authorization': tokenStorage,
         "Content-Type": "application/json",
       },
     });
@@ -73,7 +73,7 @@ test.describe("Suite de testes API ServRest", async () => {
         administrador: "true",
       },
       headers: {
-        Authorization: tokenStorage,
+        'Authorization': tokenStorage,
         "Content-Type": "application/json",
       },
     });
@@ -87,7 +87,7 @@ test.describe("Suite de testes API ServRest", async () => {
     const response = await request.delete(`${API_URL}/usuarios/${id}`,
       {
         headers: {
-          Authorization: tokenStorage,
+          'Authorization': tokenStorage,
           "Content-Type": "application/json",
         },
       }
