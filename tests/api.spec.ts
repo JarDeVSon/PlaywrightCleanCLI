@@ -5,6 +5,7 @@ let id: any;
 const API_URL = process.env.API_URL;
 
 test.describe("Suite de testes API ServRest", async () => {
+  
   test.beforeEach("Before Each Hook - POST /login", async ({ request }) => {
     console.log(API_URL);
     const response = await request.post(`${API_URL}/login`, {
