@@ -8,12 +8,12 @@ test.describe("Suite de testes API ServRest", async () => {
   test.beforeEach("Before Each Hook - Storage token", async ({ request }) => {
     console.log(API_URL);
     const response = await request.post(`${API_URL}/login`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
       data: {
         email: "fulano@qa.com",
         password: "teste",
-      },
-      headers: {
-        "Content-Type": "application/json",
       },
     });
     expect(response.status()).toBe(200);
@@ -37,8 +37,8 @@ test.describe("Suite de testes API ServRest", async () => {
         "Content-Type": "application/json",
       },
       data: {
-        nome: "Fulano da Silva",
-        email: Math.random(1) + "beltrano@qa.com.br",
+        nome: "Fulano da Silva POST",
+        email: "fulanoPOST@qa.com.br",
         password: "teste",
         administrador: "true",
       },
@@ -65,15 +65,15 @@ test.describe("Suite de testes API ServRest", async () => {
   });
   test("PUT API Request", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
-      data: {
-        nome: "Fulano da Silva 1",
-        email: Math.random(1) + "beltrano@qa.com.br",
-        password: "teste",
-        administrador: "true",
-      },
       headers: {
         Authorization: tokenStorage,
         "Content-Type": "application/json",
+      },
+      data: {
+        nome: "Fulano da Silva PUT",
+        email: "fulanoPUT@qa.com.br",
+        password: "teste",
+        administrador: "true",
       },
     });
 
