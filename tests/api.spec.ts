@@ -12,7 +12,7 @@ test.describe("Suite de testes API ServRest", async () => {
         "Content-Type": "application/json",
       },
       data: {
-        email: "fulano@qa.com",
+        email: "beltrano@qa.com.br",
         password: "teste",
       },
     });
