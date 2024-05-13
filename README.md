@@ -25,137 +25,117 @@ Playwright is generally used for end-to-end testing of web apps, but it can also
 ```
 import { test, expect } from "@playwright/test";
 
-
-let tokenStorage: any;
+let authorization: any;
 let id: any;
 const API_URL = process.env.API_URL;
 
 test.describe("Suite de testes API ServRest", async () => {
-  test.beforeEach("Before Each Hook - Storage token", async ({ request }) => {
-    console.log(API_URL)
+  
+  test.beforeEach("Before Each Hook - POST /login", async ({ request }) => {
+    console.log(API_URL);
     const response = await request.post(`${API_URL}/login`, {
-      data: {
-        email: "fulano@qa.com",
-        password: "teste",
-      },
       headers: {
         "Content-Type": "application/json",
+      },
+      data: {
+        email: "beltrano@qa.com.br",
+        password: "teste",
       },
     });
     expect(response.status()).toBe(200);
     let responseBody = await response.json();
-    tokenStorage = responseBody.authorization;
-    return tokenStorage;
+    authorization = responseBody.authorization;
+    console.log(responseBody)
+    return authorization;
+
   });
 
-  test("GET ALL API Request", async ({ request }) => {
+  test("GET /usuarios", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios`);
 
-    console.log(response);
-    console.log(response.status());
-    expect(response.status()).toBe(200)
+    console.log(response)
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+ 
   });
 
-  test("POST API Request", async ({ request }) => {
+  test("POST /usuarios", async ({ request }) => {
     const response = await request.post(`${API_URL}/usuarios`, {
       headers: {
-        Authorization: tokenStorage,
+        Authorization: authorization,
         "Content-Type": "application/json",
       },
       data: {
-        nome: "Fulano da Silva",
-        email: Math.random(1) + "beltrano@qa.com.br",
+        nome: "Fulano da Silva POST",
+        email: Math.random() + "fulanoPOST@qa.com.br",
         password: "teste",
         administrador: "true",
       },
     });
-
-    console.log(response.json());
+    console.log(response)
     console.log(response.status());
     expect(response.status()).toBe(201);
     let responseBody = await response.json();
     id = responseBody._id;
+    console.log(responseBody)
   });
 
-  test("GET ONE SINGLE API Request", async ({ request }) => {
+  test("GET /usuarios/{_id}", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios/${id}`, {
       headers: {
-        Authorization: tokenStorage,
+        Authorization: authorization,
         "Content-Type": "application/json",
       },
     });
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
 
-    console.log(response);
-    console.log(response.status());
-    expect(response.status()).toBe(200);
-  });
-  test("PUT API Request", async ({ request }) => {
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
+  test("PUT /usuarios/{_id}", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
+      headers: {
+        Authorization: authorization,
+        "Content-Type": "application/json",
+      },
       data: {
-        nome: "Fulano da Silva 1",
-        email: Math.random(1) + "beltrano@qa.com.br",
+        nome: "Fulano da Silva PUT",
+        email: Math.random() + "fulanoPUT@qa.com.br",
         password: "teste",
         administrador: "true",
       },
+    });
+
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
+
+  test("DELETE /usuarios/{_id}", async ({ request }) => {
+    const response = await request.delete(`${API_URL}/usuarios/${id}`, {
       headers: {
-        Authorization: tokenStorage,
+        Authorization: authorization,
         "Content-Type": "application/json",
       },
     });
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
 
-    console.log(response);
-    console.log(response.status());
-    expect(response.status()).toBe(200);
-  });
-
-  test("DELETE API Request", async ({ request }) => {
-    const response = await request.delete(`${API_URL}/usuarios/${id}`,
-      {
-        headers: {
-          Authorization: tokenStorage,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    console.log(response);
-    console.log(response.status());
-    expect(response.status()).toBe(200);
-  });
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
 });
 
-```
-
-## Building a CLI Helper
-1. Let’s imagine such a structure of tests. 
-
-- tests/
-    - api.spec.ts
-        - postUser
-        - getUser
-        - updateUser
-        - deleteUser
-
-Each sub-folder under the service would contain the suite tests for the respective endpoints.
-
-2. Create a new TypeScript file, runTests.ts, and add the following code:
-
-```
-
-import { execSync } from 'child_process';
-type Environments = {
-  [key: string]: string;
-};
-export const environments: Environments = {
-  dev: 'https://sandbox.example/dev',
-  sit: 'https://sandbox.example/sit’,
-  uat: 'https://sandbox.example/uat’,
-  prod: 'https://sandbox.example’,
-};
-const env = process.argv[2] || 'dev';
-const suite = process.argv[3] || '';
-const apiUrl = environments[env];
-const command = `API_URL=${apiUrl} npx playwright test tests/${suite}`;
-execSync(command, { stdio: 'inherit' });
 
 ```
 
