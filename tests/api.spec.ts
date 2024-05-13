@@ -19,15 +19,22 @@ test.describe("Suite de testes API ServRest", async () => {
     expect(response.status()).toBe(200);
     let responseBody = await response.json();
     tokenStorage = responseBody.authorization;
+    console.log(responseBody)
     return tokenStorage;
+
   });
 
   test("GET ALL API Request", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios`);
 
     console.log(response)
-    console.log(response.status());
-    expect(response.status()).toBe(200);
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+ 
   });
 
   test("POST API Request", async ({ request }) => {
@@ -38,7 +45,7 @@ test.describe("Suite de testes API ServRest", async () => {
       },
       data: {
         nome: "Fulano da Silva POST",
-        email: "fulanoPOST@qa.com.br",
+        email: Math.random() + "fulanoPOST@qa.com.br",
         password: "teste",
         administrador: "true",
       },
@@ -49,7 +56,6 @@ test.describe("Suite de testes API ServRest", async () => {
     let responseBody = await response.json();
     id = responseBody._id;
     console.log(responseBody)
-    console.log(id)
   });
 
   test("GET ONE SINGLE API Request", async ({ request }) => {
@@ -59,10 +65,13 @@ test.describe("Suite de testes API ServRest", async () => {
         "Content-Type": "application/json",
       },
     });
-    console.log(response)
-    console.log(response.status());
-    expect(response.status()).toBe(200);
-  });
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
   test("PUT API Request", async ({ request }) => {
     const response = await request.put(`${API_URL}/usuarios/${id}`, {
       headers: {
@@ -71,16 +80,19 @@ test.describe("Suite de testes API ServRest", async () => {
       },
       data: {
         nome: "Fulano da Silva PUT",
-        email: "fulanoPUT@qa.com.br",
+        email: Math.random() + "fulanoPUT@qa.com.br",
         password: "teste",
         administrador: "true",
       },
     });
 
-    console.log(response)
-    console.log(response.status());
-    expect(response.status()).toBe(200);
-  });
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
 
   test("DELETE API Request", async ({ request }) => {
     const response = await request.delete(`${API_URL}/usuarios/${id}`, {
@@ -89,8 +101,11 @@ test.describe("Suite de testes API ServRest", async () => {
         "Content-Type": "application/json",
       },
     });
-    console.log(response)
-    console.log(response.status());
-    expect(response.status()).toBe(200);
-  });
+    let responseStatus = await response.status();
+    let responseBody = await response.json();
+
+    console.log(responseStatus)
+    console.log(responseBody)
+    expect(responseStatus).toBe(200);
+   });
 });
