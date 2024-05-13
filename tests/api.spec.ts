@@ -25,7 +25,6 @@ test.describe("Suite de testes API ServRest", async () => {
   test("GET ALL API Request", async ({ request }) => {
     const response = await request.get(`${API_URL}/usuarios`);
 
-    console.log(response);
     console.log(response.status());
     expect(response.status()).toBe(200);
   });
@@ -44,7 +43,6 @@ test.describe("Suite de testes API ServRest", async () => {
       },
     });
 
-    console.log(response.json());
     console.log(response.status());
     expect(response.status()).toBe(201);
     let responseBody = await response.json();
@@ -59,7 +57,6 @@ test.describe("Suite de testes API ServRest", async () => {
       },
     });
 
-    console.log(response);
     console.log(response.status());
     expect(response.status()).toBe(200);
   });
@@ -77,7 +74,6 @@ test.describe("Suite de testes API ServRest", async () => {
       },
     });
 
-    console.log(response);
     console.log(response.status());
     expect(response.status()).toBe(200);
   });
@@ -89,7 +85,6 @@ test.describe("Suite de testes API ServRest", async () => {
         "Content-Type": "application/json",
       },
     });
-    console.log(response);
     console.log(response.status());
     expect(response.status()).toBe(200);
   });
