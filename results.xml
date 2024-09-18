@@ -1,0 +1,803 @@
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="1.6547100000000001">
+<testsuite name="api.spec.ts" timestamp="2024-09-18T02:09:49.323Z" hostname="chromium" tests="5" failures="0" skipped="0" time="1.159" errors="0">
+<testcase name="Suite de testes API ServRest › GET /usuarios" classname="api.spec.ts" time="0.433">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzI2NjI1MzkwLCJleHAiOjE3MjY2MjU5OTB9.r-mSaPFP7NBeE9-s6kIcQ8HcUD1cyj6mNHyeXM7MncI'[39m
+}
+APIResponse: 200 OK
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 97b25bcda4d509dc5972fd6c4e0e9d5f
+  Date: Wed, 18 Sep 2024 02:09:50 GMT
+  Server: Google Frontend
+  Content-Length: 31138
+  Connection: close
+[33m200[39m
+{
+  quantidade: [33m145[39m,
+  usuarios: [
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'rxcy@email.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'0T2j6vTiIVTBNFpB'[39m
+    },
+    {
+      nome: [32m'Dr. Lucas Gabriel Rezende'[39m,
+      email: [32m'gabrielly41@example.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'0evW1BkBx21LIpdV'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'fulano@qa.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'0uxuPY0cbmQhpEz1'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'lqrs@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'1EhM2R88QDuHPn63'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'lgse@email.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'1WdjskcxVqcHSkul'[39m
+    },
+    {
+      nome: [32m'Sarah Herrera'[39m,
+      email: [32m'lopezjared@example.net'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'2DVgToHfHM4P58FM'[39m
+    },
+    {
+      nome: [32m'Provando'[39m,
+      email: [32m'provando@qa.com'[39m,
+      password: [32m'teste123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'2UvCk6YyADiWWfWX'[39m
+    },
+    {
+      nome: [32m'Helo�sa Ara�jo'[39m,
+      email: [32m'kteixeira@example.org'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'3N5wbjELexKQPeJh'[39m
+    },
+    {
+      nome: [32m'[object Object]'[39m,
+      email: [32m'undefinedundefined1726625040882@qa.com.br'[39m,
+      password: [32m'Pb3@z218'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'3QnPcBdASvXfDx8W'[39m
+    },
+    {
+      nome: [32m'Linda Nguyen'[39m,
+      email: [32m'martin30@example.org'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'3Yk8NcNb1wWYnThJ'[39m
+    },
+    {
+      nome: [32m'Leonard Schmeler-Nikolaus'[39m,
+      email: [32m'Tristian50@gmail.com'[39m,
+      password: [32m'bPfFXDSUJzokl_C'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'3jsfKHXGLyE7gVEl'[39m
+    },
+    {
+      nome: [32m'Heitor Oliveira'[39m,
+      email: [32m'isabeloliveira@example.net'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'4bmFrIgLoIFHGPH1'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'fvsj@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'5HUjHEY1d7XfFyqY'[39m
+    },
+    {
+      nome: [32m'Prova Vero'[39m,
+      email: [32m'provavero@qa.com.br'[39m,
+      password: [32m'123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'5q9vLlLu6jEFdnPj'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'tqke@email.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'5sx7IB6gQWelgKHx'[39m
+    },
+    {
+      nome: [32m'Isis Brito'[39m,
+      email: [32m'pviana@example.org'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'5uQstGGFKWyQZleL'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'nftv@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'5zXFI1kl2fxq8H9w'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'phmp@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'7HlFbUkT4CSuqwkc'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'ftmy@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'7mzUP5ZMmU4xohxy'[39m
+    },
+    {
+      nome: [32m'Samara'[39m,
+      email: [32m'samara4@qa.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'8b1K48vOKydfb8DX'[39m
+    },
+    {
+      nome: [32m'Gabriela Souza'[39m,
+      email: [32m'user_6lz5D@mail.com'[39m,
+      password: [32m'Np9*XT18'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'9vKFYkZPOLBYcvwv'[39m
+    },
+    {
+      nome: [32m'Olivia Porto'[39m,
+      email: [32m'olivia@gmail.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'A43uYvMoTcr2swbw'[39m
+    },
+    {
+      nome: [32m'Verónica Ferreira'[39m,
+      email: [32m'veronica@gmail.com'[39m,
+      password: [32m'teste123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'AR5X4J6tASAn2ESP'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'aifi@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'AUUQb1OY43mlaHKo'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'beltrano@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'AVjw6PbKfDkndTvc'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'lrqf@email.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'AkTSkKU4t14ayYvj'[39m
+    },
+    {
+      nome: [32m'teste'[39m,
+      email: [32m'teste@teste.com.br'[39m,
+      password: [32m'teste1'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'ApwzLbincOwDzWNC'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'qoay@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'CFRdkJUA22qd6PJE'[39m
+    },
+    {
+      nome: [32m'Ino'[39m,
+      email: [32m'ino@qa.com.br'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'CdZOqycWfEG6JSrd'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'hwdu@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'Ci8zF2HLFVOpIoCN'[39m
+    },
+    {
+      nome: [32m'James Howell'[39m,
+      email: [32m'Demarcus.Grant@gmail.com'[39m,
+      password: [32m'ydxpmfhxckm3HbB'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'CtmdI7hCvt4DTTVJ'[39m
+    },
+    {
+      nome: [32m'Ashley Smith'[39m,
+      email: [32m'paige31@example.net'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'CuYa6Gnq8tkEcbta'[39m
+    },
+    {
+      nome: [32m'Srta. Kamilly Marques'[39m,
+      email: [32m'cecilia60@example.net'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'E2gJoutipWM0olce'[39m
+    },
+    {
+      nome: [32m'Clay Little Jr.'[39m,
+      email: [32m'Melvin_Hahn28@hotmail.com'[39m,
+      password: [32m'CJkfdsqqyKIgBA6'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'E2tTAWGvo6hHLDvu'[39m
+    },
+    {
+      nome: [32m'Douglas Miller'[39m,
+      email: [32m'kristadavis@example.org'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'E8j34FbvvZIWA95k'[39m
+    },
+    {
+      nome: [32m'Verónica Ferreira'[39m,
+      email: [32m'veronicaferreiraramos@gmail.com'[39m,
+      password: [32m'teste123'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'EAkU55Eu9C82tJnh'[39m
+    },
+    {
+      nome: [32m'Samara'[39m,
+      email: [32m'samara3@qa.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'ERwGuEx2PQ8eCJeB'[39m
+    },
+    {
+      nome: [32m'Isaque Cassiano'[39m,
+      email: [32m'estherpereira@example.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'EYUe1dAluzhJrRpi'[39m
+    },
+    {
+      nome: [32m'Rodrigo Pereira'[39m,
+      email: [32m'user_RBMKq@mail.com'[39m,
+      password: [32m'Wq5&jpIQ'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'EcAO37gPTQ2AmUiB'[39m
+    },
+    {
+      nome: [32m'Anthony Adams'[39m,
+      email: [32m'georgehunt@example.org'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'EhKx5vy7wk6izy73'[39m
+    },
+    {
+      nome: [32m'Austin Mathews'[39m,
+      email: [32m'norrismichael@example.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'F4ZnogQNv5szUgQ4'[39m
+    },
+    {
+      nome: [32m'Teste'[39m,
+      email: [32m'beltrano6948@qa.com.br'[39m,
+      password: [32m'teste1234'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'FJ6PZOUz4H79oYr8'[39m
+    },
+    {
+      nome: [32m'Isis Ferreira'[39m,
+      email: [32m'fernando34@example.org'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'FaerASbrgaFgUYKJ'[39m
+    },
+    {
+      nome: [32m'Usu�rio de Teste'[39m,
+      email: [32m'eloah33@example.com'[39m,
+      password: [32m' !*9Rp_8yzm'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'FgyFGCUCCusqWyb5'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'mvjv@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'G7OdLOWybX6u2m36'[39m
+    },
+    {
+      nome: [32m'Ana Souza'[39m,
+      email: [32m'undefinedundefined@qa.com.br'[39m,
+      password: [32m'Re8@o&Hz'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'GIUIS7wmwntamUsH'[39m
+    },
+    {
+      nome: [32m'Benjamin Marques'[39m,
+      email: [32m'qda-luz@example.net'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'GbSKw5FkTU5Cf0J9'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'sftm@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'GuKxuUyBQct9t9IK'[39m
+    },
+    {
+      nome: [32m'Sr. Igor Cavalcanti'[39m,
+      email: [32m'camarayago@example.org'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'HbGAZVsN4r1gqXNB'[39m
+    },
+    {
+      nome: [32m'Maria Sophia Farias'[39m,
+      email: [32m'nda-rosa@example.net'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'IUT0HNBFJ0nN9C3Z'[39m
+    },
+    {
+      nome: [32m'Henrietta Schinner I'[39m,
+      email: [32m'Moises.Spencer31@hotmail.com'[39m,
+      password: [32m'jgjf6coGH6qzAJY'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'IpVQDdGM4SI9zt4y'[39m
+    },
+    {
+      nome: [32m'Austin Hughes'[39m,
+      email: [32m'ntaylor@example.org'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'IufhGOrbb2r4fsaZ'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'uhxf@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'JyufU1T91vsv3C6h'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'jgtz@email.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'LPaXllBOgYGSEk6W'[39m
+    },
+    {
+      nome: [32m'Camila Rocha'[39m,
+      email: [32m'user_mdDXw@mail.com'[39m,
+      password: [32m'Sb1$B$Ox'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'LqAqlptXmZEnvEGR'[39m
+    },
+    {
+      nome: [32m'Benjamim Costela'[39m,
+      email: [32m'renan54@example.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'M7ZRRd0EFPPMAxx9'[39m
+    },
+    {
+      nome: [32m'David Arellano'[39m,
+      email: [32m'michelle69@example.org'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'MOcBHycIYJfwuiVe'[39m
+    },
+    {
+      nome: [32m'Mrs. Ollie Shields'[39m,
+      email: [32m'Marcos_Douglas-Trantow86@hotmail.com'[39m,
+      password: [32m'3ZEivQLHXLpiqsM'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'Od827xU68lro5TAc'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'hrtk@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'OgD75HtfqXtGTymb'[39m
+    },
+    {
+      nome: [32m'Bruno Gomes'[39m,
+      email: [32m'user_YvTWp@mail.com'[39m,
+      password: [32m'Va7%ja4R'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'PAESSlJPUzSLNLVy'[39m
+    },
+    {
+      nome: [32m'Samara'[39m,
+      email: [32m'samara@qa.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'PzqmEBWzDTHZdkyA'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'sgto@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'QQAPkHdeXYHMqwlX'[39m
+    },
+    {
+      nome: [32m'Veronica 2'[39m,
+      email: [32m'VeronicaFerreiraRamos@gmail.com'[39m,
+      password: [32m'32123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'QSIhvHNA5gRrjUVw'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'dtlb@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'R6HQQJM8nrusT4gt'[39m
+    },
+    {
+      nome: [32m'Inez Gorczany'[39m,
+      email: [32m'Devon_Hirthe80@gmail.com'[39m,
+      password: [32m'wD6JiZ3bcQveAt3'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'RK3jHqZeHxFbEyLQ'[39m
+    },
+    {
+      nome: [32m'fulaninho'[39m,
+      email: [32m'teste_fulano@gmail.com'[39m,
+      password: [32m'123456789'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'Rpf57FeGMYuFA9Xl'[39m
+    },
+    {
+      nome: [32m'Jody Matthews'[39m,
+      email: [32m'garcianicholas@example.net'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'SF7X1MotDDcW6CzN'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'lmwh@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'SON3uuRhpMe2J1MU'[39m
+    },
+    {
+      nome: [32m'Feiteiro Teste APi'[39m,
+      email: [32m'feiteiro@qa.com.br'[39m,
+      password: [32m'feteiro1'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'SWh80LNqWADOjDEO'[39m
+    },
+    {
+      nome: [32m'calango'[39m,
+      email: [32m'calango@email.com'[39m,
+      password: [32m'Senha1234'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'SgiDMXc4sMecq1hu'[39m
+    },
+    {
+      nome: [32m'Shannon Hamill'[39m,
+      email: [32m'Elisabeth46@hotmail.com'[39m,
+      password: [32m'4VnLeQfv9ZXMlHx'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'T16f13Uaann4Zrcp'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'ejqp@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'UKGHCsIZ1IJGT0Px'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'hctd@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'UNKyQ33DHZ2ABLUg'[39m
+    },
+    {
+      nome: [32m'Dolores Durgan-Durgan'[39m,
+      email: [32m'Conrad84@yahoo.com'[39m,
+      password: [32m'pk6ATOkWwTvyKCI'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'Uv3Ar0eC79yoFoA3'[39m
+    },
+    {
+      nome: [32m'James Bowman'[39m,
+      email: [32m'wardsarah@example.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'VBh9d509VSi6xLfH'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'qhui@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'VIvTYtdx2Ma110va'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'pstu@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'VrqYKEjckKSWvHL4'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'wjhj@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'VuuiBSUb9s3oaof6'[39m
+    },
+    {
+      nome: [32m'Gabi'[39m,
+      email: [32m'veroo@gmail.com'[39m,
+      password: [32m'teste 123'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'WK5c3EvQkzdjErbx'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'lddu@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'X6iwNz5do4KMKX9J'[39m
+    },
+    {
+      nome: [32m'Lawrence Deckow'[39m,
+      email: [32m'Noah_Wisozk@gmail.com'[39m,
+      password: [32m'Vkj19sp5ss0QO5G'[39m,
+      administrador: [32m'false'[39m,
+      _id: [32m'XVbg9WoKppSqp1sS'[39m
+    },
+    {
+      nome: [32m'Bruno Monteiro'[39m,
+      email: [32m'user_SE7Lm@mail.com'[39m,
+      password: [32m'Xt2*0P6J'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'XWdw1JCq5BDawJS4'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'cwec@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'Y3GNdz0z4gfXHzJE'[39m
+    },
+    {
+      nome: [32m'Orville Runolfsdottir'[39m,
+      email: [32m'Adeline74@hotmail.com'[39m,
+      password: [32m'esU3v72j_giD407'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'ZENjfZhZlnoXFb5H'[39m
+    },
+    {
+      nome: [32m'Breno Duarte'[39m,
+      email: [32m'yfernandes@example.com'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'ZHNa8Fm82ZYQzj2M'[39m
+    },
+    {
+      nome: [32m'Bruno Santos'[39m,
+      email: [32m'user_0nyjQ@mail.com'[39m,
+      password: [32m'Zp1*EHKh'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'ZX2h0VTRDWL9hHTu'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'dmiw@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'a5qfEBZiYAMyoVOj'[39m
+    },
+    {
+      nome: [32m'Vitor Hugo Moreira'[39m,
+      email: [32m'jnogueira@example.net'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'a9A1alEbDn71bQDe'[39m
+    },
+    {
+      nome: [32m'Nicholas Lopez'[39m,
+      email: [32m'timothycantu@example.com'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'aDj8mLhnxDAGDyIW'[39m
+    },
+    {
+      nome: [32m'Domingo Lesch Sr.'[39m,
+      email: [32m'Mylene.Rolfson@gmail.com'[39m,
+      password: [32m'_tL3nXqXjeUS7zf'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'aGoUx6YMNlas0GMB'[39m
+    },
+    {
+      nome: [32m'Shelly Bauch-Schowalter'[39m,
+      email: [32m'Marianna83@hotmail.com'[39m,
+      password: [32m'LJ9q8YEaV2PvWWl'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'b0ULoG5cRPa7T2hO'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'wmzn@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'bBTGKQnoWCCoPJ3e'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'eytk@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'dl3JmZOH0wbJclg2'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'pyrh@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'dtzRdmrqlDbe2jzr'[39m
+    },
+    {
+      nome: [32m'Usu�rio de Teste'[39m,
+      email: [32m'heloisasa@example.net'[39m,
+      password: [32m' 83%TMXqk!y'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'e3q8wfD4SDf521KK'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'krol@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'eCmiiX4dmPhkUgig'[39m
+    },
+    {
+      nome: [32m'Jessica Galloway'[39m,
+      email: [32m'tommy54@example.net'[39m,
+      password: [32m'teste'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'eMqCP7x825D8qPni'[39m
+    },
+    {
+      nome: [32m'Fulano da Silva'[39m,
+      email: [32m'oces@emailteste.com'[39m,
+      password: [32m'1234'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'f3iueuLa1ntVnAyW'[39m
+    },
+    {
+      nome: [32m'Aline Nascimento'[39m,
+      email: [32m'user_YfECo@mail.com'[39m,
+      password: [32m'Bl6%QkI@'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'fGSIsNynqafECZ28'[39m
+    },
+    {
+      nome: [32m'Luiz Felipe Costela'[39m,
+      email: [32m'yasmincamara@example.net'[39m,
+      password: [32m'123456'[39m,
+      administrador: [32m'true'[39m,
+      _id: [32m'gx4gWr3SEIyEYyl4'[39m
+    },
+    ... 45 more items
+  ]
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › POST /usuarios" classname="api.spec.ts" time="0.189">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzI2NjI1MzkwLCJleHAiOjE3MjY2MjU5OTB9.r-mSaPFP7NBeE9-s6kIcQ8HcUD1cyj6mNHyeXM7MncI'[39m
+}
+APIResponse: 201 Created
+  access-control-allow-origin: *
+  x-dns-prefetch-control: off
+  x-frame-options: SAMEORIGIN
+  strict-transport-security: max-age=15552000; includeSubDomains
+  x-download-options: noopen
+  x-content-type-options: nosniff
+  x-xss-protection: 1; mode=block
+  content-type: application/json; charset=utf-8
+  X-Cloud-Trace-Context: 6594a6a6e2a73b75fc39ffb8b409be69
+  Date: Wed, 18 Sep 2024 02:09:50 GMT
+  Server: Google Frontend
+  Content-Length: 82
+  Connection: close
+[33m201[39m
+{ message: [32m'Cadastro realizado com sucesso'[39m, _id: [32m'QEMb73by2H5jVJoN'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › GET /usuarios/{_id}" classname="api.spec.ts" time="0.17">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzI2NjI1MzkwLCJleHAiOjE3MjY2MjU5OTB9.r-mSaPFP7NBeE9-s6kIcQ8HcUD1cyj6mNHyeXM7MncI'[39m
+}
+[33m200[39m
+{
+  nome: [32m'Fulano da Silva POST'[39m,
+  email: [32m'0.5828546363615028fulanoPOST@qa.com.br'[39m,
+  password: [32m'teste'[39m,
+  administrador: [32m'true'[39m,
+  _id: [32m'QEMb73by2H5jVJoN'[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › PUT /usuarios/{_id}" classname="api.spec.ts" time="0.178">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzI2NjI1MzkwLCJleHAiOjE3MjY2MjU5OTB9.r-mSaPFP7NBeE9-s6kIcQ8HcUD1cyj6mNHyeXM7MncI'[39m
+}
+[33m200[39m
+{ message: [32m'Registro alterado com sucesso'[39m }
+]]>
+</system-out>
+</testcase>
+<testcase name="Suite de testes API ServRest › DELETE /usuarios/{_id}" classname="api.spec.ts" time="0.189">
+<system-out>
+<![CDATA[https://serverest.dev
+{
+  message: [32m'Login realizado com sucesso'[39m,
+  authorization: [32m'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNzI2NjI1MzkwLCJleHAiOjE3MjY2MjU5OTB9.r-mSaPFP7NBeE9-s6kIcQ8HcUD1cyj6mNHyeXM7MncI'[39m
+}
+[33m200[39m
+{ message: [32m'Registro excluído com sucesso'[39m }
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
